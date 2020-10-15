@@ -2,31 +2,30 @@ import React, { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { userContext } from '../../../../App';
-import Admin from '../Admin/Admin';
+import AdminEmail from '../Admin/AdminEmail/AdminEmail';
 
 const AdminHome = () => {
-    const { value1, value3 } = useContext(userContext);
+    
+    const { value1 } = useContext(userContext);
     const [loggedInUser, setLoggedInUser] = value1;
-    const admin = value3;
+    // const admin = value3;
     // const { value3 } = useContext(userContext);
-    // const [adminEmail, setAdminEmail] = useState([]);
+    const [adminEmail, setAdminEmail] = useState([]);
 
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/adminEmail')
-    //     .then(res => res.json())
-    //     .then(data => setAdminEmail(data))
-    // }, [])
-    // console.log(adminEmail, loggedInUser.email);
+    useEffect(() => {
+        fetch('https://fathomless-sea-39803.herokuapp.com/adminEmail')
+        .then(res => res.json())
+        .then(data => setAdminEmail(data))
+    }, [])
 
-    // const admin = adminEmail.filter(eml => eml.email === loggedInUser.email);
-    // const admin = adminEmail.map(e => e.email);
-    // console.log(admin[0]);
+    const admin = adminEmail.filter(eml => eml.email === loggedInUser.email);
 
+    
     return (
         <>
-           {
-               (admin[0] === loggedInUser.email) && <Admin /> 
-           }
+        {
+            admin.map(ad => <AdminEmail key={ad._id} email={ad} />)
+        }
         </>
     );
 };

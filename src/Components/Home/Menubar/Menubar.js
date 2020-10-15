@@ -16,7 +16,7 @@ const Menubar = () => {
                         <Link className="nav-link menu-link" to="/admin">Admin</Link>
                         <Link className="nav-link menu-link" to="/contact">Contact Us</Link>
                     </Nav>
-                    <Link className='ml-2' to='/login'><button className=' btn-brand'>Login</button></Link>
+                    <Link className='ml-2' to='/adminLogin'><button className=' btn-brand'>Login</button></Link>
                 </Navbar.Collapse>
             </Navbar>
         </div>

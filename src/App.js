@@ -19,9 +19,10 @@ import service2 from './images/icons/service2.png';
 import service3 from './images/icons/service3.png';
 import AdminHome from './Components/Pages/Admin/AdminHome/AdminHome';
 import Admin from './Components/Pages/Admin/Admin/Admin';
-import { useEffect } from 'react';
 import NoMatch from './Components/NoMatch/NoMatch';
 import PrivateRoute from './Components/Pages/Login/PrivateRoute/PrivateRoute';
+import AdminEmail from './Components/Pages/Admin/Admin/AdminEmail/AdminEmail';
+import AdminLogin from './Components/Pages/Admin/AdminLogin/AdminLogin';
 
 
 
@@ -47,19 +48,9 @@ function App() {
     }
   ];
   const [loggedInUser, loggedOutUser] = useState([]);
-  const [adminEmail, setAdminEmail] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:5000/adminEmail')
-      .then(res => res.json())
-      .then(data => setAdminEmail(data))
-  }, [])
-
-  const admin = adminEmail.map(e => e.email);
-  // console.log(admin[0]);
 
   return (
-    <userContext.Provider value={{ value1: [loggedInUser, loggedOutUser], value2: serviceData, value3: admin }}>
+    <userContext.Provider value={{ value1: [loggedInUser, loggedOutUser], value2: serviceData }}>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -92,8 +83,14 @@ function App() {
           <Route path="/addedService">
             <Admin />
           </Route>
+          <Route path="/adminEmail">
+            <AdminEmail />
+          </Route>
           <Route path="/makeAdmin">
             <MakeAdmin />
+          </Route>
+          <Route path="/adminLogin">
+            <AdminLogin />
           </Route>
           <Route path="*">
             <NoMatch />
