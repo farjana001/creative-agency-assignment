@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './status.css';
+
 
 const Status = () => {
     const [status, setStatus] = useState([]);
@@ -33,8 +35,8 @@ const Status = () => {
             <form onSubmit={handleSubmit}>
                 <div class="form-row align-items-center">
                     <div style={{ width: '120px' }} class="col-auto my-1">
-                        <select onChange={handleSelectChange} class="custom-select mr-sm-2 " id="inlineFormCustomSelect">
-                            <option className="bg-success text-white " value="1">Choose</option>
+                        <select onChange={handleSelectChange} className="custom-select select-btn mr-sm-2 " id="inlineFormCustomSelect">
+                            <option className="bg-success text-white classpicker" value="1">Choose</option>
                             <option className="bg-success text-white " value="Done">Done</option>
                             <option className="bg-warning text-white" value="Ongoing">Ongoing</option>
                             <option className="bg-danger text-white" value="Pending">Pending</option>

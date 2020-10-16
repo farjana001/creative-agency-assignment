@@ -13,8 +13,11 @@ const Home = () => {
         <>
             <Header />
             <LogoBar />
-            <Services />
-            <ShowAddedServices />
+            {/* <Services />
+            <ShowAddedServices /> */}
+            {
+                <ShowAddedServices /> ? <ShowAddedServices /> : <Services />
+            }
             <Works />
             <ShowReview />
             <ContactForm />

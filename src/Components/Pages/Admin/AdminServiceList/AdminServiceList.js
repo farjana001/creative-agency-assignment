@@ -7,19 +7,25 @@ import AdminServiceTable from '../AdminServiceTable/AdminServiceTable';
 const AdminServiceList = () => {
 
     return (
-        <main>
-            <div className="sticky">
-                <AdminSidebar />
-                <div className="row">
-                    <div className="col-md-3 py-3">
-                        <Link to="/home"><img className="logo ml-5" src={logo} alt="" /></Link>
-                    </div>
-                    <div className="col-md-9">
-                        <h4 className="order-heading">Service List</h4>
-                    </div>
+        <main className="container-fluid">
+            <div className="row">
+                <div className="py-3">
+                    <Link to="/home"><img className="logo ml-5" src={logo} alt="" /></Link>
                 </div>
-                <div className="order-body">
-                    <AdminServiceTable />
+                <div className="pl-5">
+                    <h4 className="order-heading">Order</h4>
+                </div>
+            </div>
+            <div className="user-dash-container">
+                <div className="row">
+                    <div className="col-md-2">
+                        <AdminSidebar />
+                    </div>
+                    <div className="col-md-10">
+                        <div className="order-body">
+                            <AdminServiceTable />
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

@@ -24,12 +24,12 @@ const MakeAdminForm = () => {
           <div className="row">
           <input
                 style={{width:'60%', marginLeft:'10px', marginRight:'10px'}}
-                className='form-control'
+                className='form-control mb-3'
                 name="email"
                 ref={register({ required: true })}
                 placeholder="john@gmail.com" /> <br />
             {errors.email && <span className='error'>Name is required</span>}
-            <input className='btn btn-success px-4' type="submit" value="Submit" />
+            <input className='btn btn-success px-4 mb-3 ml-2' type="submit" value="Submit" />
           </div>
         </form>
     </div>

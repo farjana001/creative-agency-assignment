@@ -21,8 +21,8 @@ const AdminLogin = () => {
         firebase.initializeApp(firebaseConfig);
     }
 
-     // google sign in
-     const handleGoogleSignIn = () => {
+    // google sign in
+    const handleGoogleSignIn = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider)
             .then(result => {
@@ -41,13 +41,15 @@ const AdminLogin = () => {
 
     return (
         <div className="container text-center p-5">
-            <Link to="/home"><img style={{width:'200px'}} className='mx-5 pr-5' src={logo} alt="" /></Link>
-            <div className="login-form border bg-white my-5 mx-auto d-flex justify-content-center align-items-center">
-                <div>
-                    <h3>Login With</h3>
-                    <p onClick={handleGoogleSignIn} className='google-sign-in mt-5'><img src={googleIcon} alt="" /><span className='login-text'>Continue with Google</span></p>
-                    <p>Don't have an account? <Link to='/login'>Create an account</Link></p>
+            <Link to="/home"><img style={{ width: '200px' }} className='mx-5 pr-5' src={logo} alt="" /></Link>
+
+            <div className="login-form border bg-white my-5 mx-auto text-center">
+                <h3 className="login-header">Login With</h3>
+                <div onClick={handleGoogleSignIn} className="row d-flex justify-content-center align-items-center google-button my-4 mx-auto">
+                    <img src={googleIcon} alt="" className="img-fluid google-icon" />
+                    <span className="login-text py-2">Continue with Google</span>
                 </div>
+                <p>Don't have an account? <Link to='/login'>Create an account</Link></p>
             </div>
         </div>
     );

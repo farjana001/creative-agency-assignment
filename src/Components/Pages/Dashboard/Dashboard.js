@@ -4,6 +4,7 @@ import './Dashboard.css';
 import logo from '../../../images/logos/logo.png';
 
 const Dashboard = () => {
+    
     return (
         <div style={{ backgroundColor: '#F4F7FC', height: '100vh' }}>
             <div className="container pt-5 text-center">
@@ -16,7 +17,7 @@ const Dashboard = () => {
                     </div>
                     <div className="col-md-3">
                         <Link to="/order">
-                            <button className="user-btn">User Dashboard</button>
+                            <button className="btn user-btn">User Dashboard</button>
                         </Link>
                     </div>
                 </div>

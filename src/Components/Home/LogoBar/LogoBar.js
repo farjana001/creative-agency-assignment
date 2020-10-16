@@ -8,22 +8,32 @@ import airBnb from '../../../images/logos/airbnb.png';
 
 const LogoBar = () => {
     return (
-        <section className="container">
-            <div style={{marginTop:'100px'}} className="row d-flex justify-content-center align-items-center">
-                <div className="col-md-2">
-                    <img className="img-fluid w-75" src={slack} alt=""/>
+        <section className="container text-center">
+            <div style={{ marginTop: '100px' }} className="row d-flex justify-content-center align-items-center">
+                <div className="col-md-2 col-sm-4 mb-3">
+                    <div>
+                        <img style={{ height: '40px' }} className="img-fluid" src={slack} alt="" />
+                    </div>
                 </div>
-                <div className="col-md-2">
-                    <img className="img-fluid w-75" src={google} alt=""/>
+                <div className="col-md-2 col-sm-4 mb-3">
+                    <div>
+                        <img style={{ height: '42px' }} className="img-fluid" src={google} alt="" />
+                    </div>
                 </div>
-                <div className="col-md-2">
-                    <img className="img-fluid w-50" src={uber} alt=""/>
+                <div className="col-md-2 col-sm-4 mb-3">
+                    <div>
+                        <img style={{ height: '35px' }} className="img-fluid" src={uber} alt="" />
+                    </div>
                 </div>
-                <div className="col-md-2">
-                    <img className="img-fluid w-50" src={netflix} alt=""/>
+                <div className="col-md-2 col-sm-4 mb-3">
+                    <div>
+                        <img style={{ height: '60px' }} className="img-fluid" src={netflix} alt="" />
+                    </div>
                 </div>
-                <div className="col-md-2">
-                    <img className="img-fluid w-75" src={airBnb} alt=""/>
+                <div className="col-md-2 col-sm-4 mb-3">
+                    <div>
+                        <img style={{ height: '40px' }} className="img-fluid" src={airBnb} alt="" />
+                    </div>
                 </div>
             </div>
         </section>

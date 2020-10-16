@@ -3,8 +3,8 @@ import './ContactForm.css'
 
 const ContactForm = () => {
     return (
-        <section style={{ height: '710px', backgroundColor: '#FBD062', marginTop: '150px' }}>
-            <div className="container pt-2">
+        <section className="contact-container py-4">
+            <div className="container">
                 <div className="row">
                     <div className="col-md-6">
                         <div className="p-5">
@@ -12,8 +12,8 @@ const ContactForm = () => {
                             <p style={{ color: '#63583C', marginTop: '32px' }}>With well written codes, we build amazing apps for all platforms, mobile and web apps in general.</p>
                         </div>
                     </div>
-                    <div className="col-md-6">
-                        <form style={{ marginTop: '52px' }} action="">
+                    <div className="col-md-6 pb-3">
+                        <form style={{ marginTop: '52px' }}>
                             <div className="form-group">
                                 <input type="text" className="form-control p-4" placeholder="Your email address" />
                             </div>
@@ -29,7 +29,7 @@ const ContactForm = () => {
                         </form>
                     </div>
                 </div>
-                <div style={{marginTop: '90px'}} className="text-p text-center">copyright Orange labs {new Date().getFullYear()}</div>
+                <div className="text-p text-center py-4">copyright Orange labs {new Date().getFullYear()}</div>
             </div>
         </section>
     );

@@ -12,7 +12,7 @@ const Menubar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
                         <Link className="nav-link menu-link" to="/home">Home</Link>
-                        <Link className="nav-link menu-link" to="">Our Portfolio</Link>
+                        <Link className="nav-link menu-link" to="/portfolio">Our Portfolio</Link>
                         <Link className="nav-link menu-link" to="/dashboard">Dashboard</Link>
                         <Link className="nav-link menu-link" to="/contact">Contact Us</Link>
                     </Nav>

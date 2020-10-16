@@ -13,13 +13,13 @@
     background-color: #111430;
     border-color: transparent;
     font-weight: 600;
-    height: 45px;
     color: white;
     border-radius: 5px;
-    padding: 0px 30px;
+    padding: 9px 30px;
 }
 .user-btn:hover{
     background-color: #05060f;
+    color: white;
 }
 .home-btn{
     background-color:#e6f1f5;

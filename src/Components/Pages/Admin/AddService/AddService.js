@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 import './AddService.css';
 
 
@@ -60,8 +59,8 @@ const AddService = () => {
                         </div>
                         <div className="col-md-5">
                             <h6>Icon</h6>
-                            <div className="form-group">
-                                <input onChange={handleFileChange} type="file" className="form-control pb-4" placeholder=" Upload image" />
+                            <div className="">
+                                <input onChange={handleFileChange} type="file" className="form-control pb-4 upload-image" placeholder=" Upload image" />
                             </div>
                         </div>
                     </div>
