@@ -8,8 +8,6 @@ const AdminHome = () => {
     
     const { value1 } = useContext(userContext);
     const [loggedInUser, setLoggedInUser] = value1;
-    // const admin = value3;
-    // const { value3 } = useContext(userContext);
     const [adminEmail, setAdminEmail] = useState([]);
 
     useEffect(() => {

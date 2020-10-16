@@ -6,10 +6,7 @@ const Status = () => {
     const handleSelectChange = (e) => {
         let elem = document.getElementById("inlineFormCustomSelect"),
             selectedNode = elem.options[elem.selectedIndex];
-        // console.log(selectedNode.value);
-        // const newStatus = e.options[e.selectedIndex].text;
-        // setStatus(newStatus);
-        setStatus(selectedNode.value);
+            setStatus(selectedNode.value);
 
     }
 

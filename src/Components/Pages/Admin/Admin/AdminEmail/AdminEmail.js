@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { userContext } from '../../../../../App';
+import NotMatch from '../../../../NoMatch/NoMatch';
 import Admin from '../Admin';
 
 
@@ -11,7 +12,7 @@ const AdminEmail = ({email}) => {
     return (
         <div>
             {
-              (loggedInUser.email === email.email ) && <Admin />
+              (loggedInUser.email === email.email ) ? <Admin /> : <NotMatch />
             }
         </div>
     );

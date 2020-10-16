@@ -14,7 +14,7 @@ const AdminLogin = () => {
     const history = useHistory();
     const location = useLocation();
 
-    let { from } = location.state || { from: { pathname: "/" } };
+    let { from } = location.state || { from: { pathname: "/dashboard" } };
 
     // initializing firebase app
     if (firebase.apps.length === 0) {

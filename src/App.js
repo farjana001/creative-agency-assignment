@@ -23,6 +23,7 @@ import NoMatch from './Components/NoMatch/NoMatch';
 import PrivateRoute from './Components/Pages/Login/PrivateRoute/PrivateRoute';
 import AdminEmail from './Components/Pages/Admin/Admin/AdminEmail/AdminEmail';
 import AdminLogin from './Components/Pages/Admin/AdminLogin/AdminLogin';
+import Dashboard from './Components/Pages/Dashboard/Dashboard';
 
 
 
@@ -91,6 +92,9 @@ function App() {
           </Route>
           <Route path="/adminLogin">
             <AdminLogin />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
           </Route>
           <Route path="*">
             <NoMatch />
